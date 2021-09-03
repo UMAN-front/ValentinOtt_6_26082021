@@ -2,11 +2,19 @@ body {
     margin-left: 2rem;
     margin-right: 2rem;
 }
+.header {
+    max-width: 1440px;
+    margin: auto;
+}
+.main {
+    max-width: 1440px;
+    margin: auto;
+}
 .topnav-photographe {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding-left: 3.5rem;
+    padding-left: 2.5rem;
     margin: auto;
 }
 a{
@@ -101,4 +109,92 @@ display: flex;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
+}
+.trie {
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 5px;
+    padding: 0 2.5rem;
+}
+.trie-par {
+    padding: 0 2rem 2rem 0rem;
+    color: #901C1C;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+.filter {
+    padding: 0 1rem;
+    border-radius: 5px;
+    background: #911C1C;
+    width: 170px;
+    height: 60px;
+    color: #FFFFFF;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+/* Main carte  */
+.grille-portfolio {
+    display: grid;
+    column-gap: 2.5rem;
+    row-gap: 0rem;
+    border-radius: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card-photo-img {
+    height: 300px;
+    width: 350px;
+    object-fit: cover;
+    object-position: 40% 40%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    background: #C4C4C4;
+    box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
+    margin-top: 2rem;
+}
+.card-photo {
+    margin-bottom: 0;
+}
+.cadre-photo-titre {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2.5rem;
+    padding-right: 4rem;
+    height: 35px;
+    
+}
+.card-titre {
+    color: #911C1C;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 0rem;
+    margin-bottom: 0;
+}
+.card{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: #911C1C;
+    font-style: normal;
+    display: flex;
+    height: auto;
+}
+.fas {
+    background: #911C1C;  
+}
+.like-number {
+    color: #911C1C;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
 }
