@@ -1,7 +1,6 @@
 'use strict';
 /////////////////////////////////////////
 
-import GalleryFactory from './GalleryFactory.js';
 
 export default class MediaBuilder {
     // call the GalleryFactory to create the media section with 'Like' function and the box
