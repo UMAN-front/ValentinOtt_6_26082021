@@ -11,8 +11,8 @@ export default class HomePageBuilder {
             let articlePhotographers = document.createElement('article');
             articlePhotographers.className = photographe.tags.join(' ') + ' articlePh';
             let templatePhotographer = `
-            <a href="photographers.html?id=${photographe.id}" title="${photographe.name}">
-                <img src="${photographe.portrait}" alt="${photographe.alt}">
+            <a href="page-photographe.html?id=${photographe.id}" title="${photographe.name}">
+                <img src="./image/portrais/${photographe.portrait}" alt="${photographe.alt}">
                 <h2 class="name">${photographe.name}</h2>
             </a>
             <p class="location">${photographe.city}, ${photographe.country}</p>
@@ -21,11 +21,8 @@ export default class HomePageBuilder {
             <ul class="filter">${photographe.tags.map(tag =>
                 `<li data-filter="${tag}">#${tag}</li>`).join(" ")}</ul> 
             `
-
             sectionPhotographers.appendChild(articlePhotographers);
             articlePhotographers.innerHTML = templatePhotographer;
         })
-        new Filter().filterTags();
-        new Scroll().scrollButton();
     }
 }
