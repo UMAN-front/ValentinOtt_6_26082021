@@ -11,7 +11,16 @@ import HomePageBuilder from './Home/homePage.js';
 import PhotographerProfil from './Photographers/photographes.js'
 
 //PORTEFOLIO 
-import MediaBuilder from './Photographers/medias.js'
+import ImageFactory from './Factory/Image.js'
+
+
+
+// Objet; 
+// Fetch; 
+// DOM; 
+// Voir OPCR JS; 
+
+
 
 (function appDispatch() {
     new ApiFishEye().getDataFishEye().then((data) => {
@@ -19,7 +28,7 @@ import MediaBuilder from './Photographers/medias.js'
             // PHOTOGRAPHER PROFIL HEADER
             new PhotographerProfil().displayPhotographerProfil(data);
             // PHOTOGRAPHER PHOTOS
-            new MediaBuilder().photographersMedias(data);
+            new ImageFactory().photographersMedias(data);
             return
         }
         // HOMEPAGE (PHOTOGRAPHERS, SCROLL, FILTER)

@@ -9,11 +9,11 @@ export default class ApiFishEye {
         let data = await response.json();
 
         const dataPhotographers = [...data.photographers];
-        const dataMedias = [...data.media];
-
+        const dataMedia = [...data.media];
+        console.log(data.media);
         return {
             'photographers': dataPhotographers,
-            'media': dataMedias
+            'media': dataMedia
         };
     }
 }

@@ -23,6 +23,7 @@ export default class HomePageBuilder {
             `
             sectionPhotographers.appendChild(articlePhotographers);
             articlePhotographers.innerHTML = templatePhotographer;
+            console.log(data);
         })
     }
 }
