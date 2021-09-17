@@ -1,3 +1,7 @@
+// Objet; 
+// Fetch; 
+// DOM; 
+// Voir OPCR JS; 
 'use strict';
 /////////////////////////////////////////
 
@@ -11,14 +15,8 @@ import HomePageBuilder from './Home/homePage.js';
 import PhotographerProfil from './Photographers/photographes.js'
 
 //PORTEFOLIO 
-import ImageFactory from './Factory/Image.js'
+import MEDIAPageBuilder from './Factory/Image.js'
 
-
-
-// Objet; 
-// Fetch; 
-// DOM; 
-// Voir OPCR JS; 
 
 
 
@@ -28,7 +26,7 @@ import ImageFactory from './Factory/Image.js'
             // PHOTOGRAPHER PROFIL HEADER
             new PhotographerProfil().displayPhotographerProfil(data);
             // PHOTOGRAPHER PHOTOS
-            new ImageFactory().photographersMedias(data);
+            new MEDIAPageBuilder().photographersMedias(data);
             return
         }
         // HOMEPAGE (PHOTOGRAPHERS, SCROLL, FILTER)
