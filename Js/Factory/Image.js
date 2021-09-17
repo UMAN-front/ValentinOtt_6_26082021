@@ -5,7 +5,7 @@
 //     displayMedia(data) {
 //         let mediaData = data.media;
 //         const id = window.location.search.split('id=')[0];
-//         const media = !id ? mediaData : mediaData.filter(media => photographe.id == id);
+
 //         const sectionMedia = document.getElementById('media-works');
 //         const templateMedia = `
 //             <article aria-label="media Profil" class="topnav-media">
@@ -180,21 +180,49 @@
 //     articlePhotographers.innerHTML = templatePhotographer;
 // }
 // }
+//         const media = !id ? mediaData : mediaData.filter(media => photographe.id == id);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default class MEDIAPageBuilder {
     // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button
-    displayPhotographers(data) {
-        let media = data.media;
-        photographers.map(photographe => {
-            let sectionPhotographers = document.getElementById('media');
-            let templatePhotographer = `
-            <a href="page-photographe.html?id=${photographe.id}" title="${photographe.name}">
-            <img src="./image/Portfolio/${photographe.portrait}" alt="${photographe.alt}">
-            </a>
-            `
-            sectionPhotographers.appendChild(articlePhotographers);
-            articlePhotographers.innerHTML = templatePhotographer;
-        })
-        console.log(data.media);
+    displayMedia(photographerMedias) {
+        photographerMedias.map(media => {
+            // console.log("j'implémente l'affichage de média ", media);
+            if (media.image) {
+                new ImageBuilder().displayImage(media)
+            }
+            if (media.video) {
+                new VideoBuilder().displayVideo(media)
+            }
+        })    
+    }
+}
+
+class ImageBuilder {
+    displayImage(image) {
+        console.log("j'implémente l'affichage d'une image ", image);
+    }     
+}
+
+class VideoBuilder {
+    displayVideo(video) {
+        console.log("j'implémente l'affichage d'une vidéo ", video); 
     }
 }

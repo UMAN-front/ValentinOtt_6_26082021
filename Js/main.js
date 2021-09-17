@@ -26,12 +26,11 @@ import MEDIAPageBuilder from './Factory/Image.js'
             // PHOTOGRAPHER PROFIL HEADER
             new PhotographerProfil().displayPhotographerProfil(data);
             // PHOTOGRAPHER PHOTOS
-            new MEDIAPageBuilder().photographersMedias(data);
             return
         }
         // HOMEPAGE (PHOTOGRAPHERS, SCROLL, FILTER)
         new HomePageBuilder().displayPhotographers(data);
-        new PhotographerProfil().displayPhotographers(data);
+        // new PhotographerProfil().displayPhotographers(data);
         
     }).catch(() => {
     })
