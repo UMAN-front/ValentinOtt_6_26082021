@@ -218,6 +218,15 @@ export default class MEDIAPageBuilder {
 class ImageBuilder {
     displayImage(image) {
         console.log("j'implémente l'affichage d'une image ", image);
+        const sectionMedia = document.getElementById('image medias');
+        const templateMedia = `
+        <article aria-label="Media" class="Medias">
+        
+        
+
+        </article>
+        `
+        sectionMedia.innerHTML = templateMedia;
     }     
 }
 
