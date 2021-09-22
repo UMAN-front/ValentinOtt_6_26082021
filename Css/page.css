@@ -149,7 +149,7 @@ section img {
     line-height: 23px;
 }
 /* Main carte  */
-.grille-portfolio {
+#grille-portfolio {
     display: grid;
     column-gap: 2.5rem;
     row-gap: 0rem;
@@ -189,7 +189,7 @@ section img {
     margin-top: 0rem;
     margin-bottom: 0;
 }
-.card{
+.article-media{
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     color: #911C1C;

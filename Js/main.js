@@ -26,6 +26,8 @@ import MEDIAPageBuilder from './Factory/Image.js'
             // PHOTOGRAPHER PROFIL HEADER
             new PhotographerProfil().displayPhotographerProfil(data);
             // PHOTOGRAPHER PHOTOS
+            new MEDIAPageBuilder().displayMedia(data);
+            
             return
         }
         // HOMEPAGE (PHOTOGRAPHERS, SCROLL, FILTER)
