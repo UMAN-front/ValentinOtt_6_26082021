@@ -191,15 +191,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
+'use strict';
+/////////////////////////////////////////
 export default class MEDIAPageBuilder {
     // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button
     displayMedia(photographerMedias) {
@@ -218,15 +211,14 @@ export default class MEDIAPageBuilder {
 class ImageBuilder {
     displayImage(image) {
         console.log("j'implémente l'affichage d'une image ", image);
-        const sectionMedia = document.getElementById('image medias');
+        const sectionMedias = document.getElementById('test');
         const templateMedia = `
-        <article aria-label="Media" class="Medias">
-        
-        
-
-        </article>
+        <div class="carte">
+        <img src="./Image/Mimi/${photographerMedias[0].image}" alt="${photographerMedias[0].alt}"></a>
+        <h2 class="name">${photographerMedias.title}</h2>
+        </div>
         `
-        sectionMedia.innerHTML = templateMedia;
+        sectionMedias.innerHTML = templateMedia;
     }     
 }
 
