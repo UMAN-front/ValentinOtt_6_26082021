@@ -30,7 +30,10 @@ class ImageBuilder {
          </a>
          <figcaption class="cadre-photo-titre">
             <h3 class="card-titre">${image.title}</h3>
-            <span class="like-number">${image.likes}</span>
+            <div class="nombre-likes">
+            <span class="like-number"><a href="#">${image.likes}</a></span>
+            <i class="far fa-heart like-portfolio" aria-label="likes" roles="button" aria-hidden="true"></i>
+            </div>
          </figcaption>
         </div>
         `
@@ -48,11 +51,10 @@ class VideoBuilder {
         const templateMedia = `
         <div class="card">
             <div class="card-photo">
-            <video controls="controls" class="card-photo-img" <source src="./Image/portfolio/videos/${video.video}" type="video/mp4 </video>
-            <video controls="controls" class="card-photo-img" <source src="./Image/portfolio/videos/${video.video}" type="video/webm </video>
+            <video controls="controls" class="card-photo-video" <source src="./Image/portfolio/videos/${video.video}" type="video/mp4 </video>
             <p>Votre navigateur ne supporte pas la vidéo HTML5. Voici à la place <a href="#">un lien vers la vidéo</a>.</p>
             </div>
-            <figcaption class="cadre-photo-titre">
+            <figcaption class="cadre-photo-video">
             <h3 class="card-titre">${video.title}</h3>
             <span class="like-number">${video.likes}</span>
          </figcaption>

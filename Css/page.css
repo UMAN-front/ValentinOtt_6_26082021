@@ -73,6 +73,30 @@ section img {
     font-size: 18px;
     line-height: 23px;
 }
+#contact {
+    background: #901c1c;
+    border: none;
+    border-radius: 5px;
+    bottom: 28px;
+    color: #fff;
+    cursor: pointer;
+
+    width: 170px;
+    height: 69px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: 250px;
+}
+/* identical to box height */
+
 .grille-photographe {
     display: flex;
     justify-content: space-between;
@@ -168,6 +192,19 @@ section img {
     box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
     margin-top: 2rem;
 }
+.card-photo-video {
+    height: 300px;
+    width: 350px;
+    object-fit: cover;
+    object-position: 40% 40%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    background: #C4C4C4;
+    box-shadow: 0px 4px 12px rgb(0 0 0 / 25%);
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+}
 .card-photo {
     margin-bottom: 0;
 }
@@ -177,7 +214,13 @@ section img {
     margin-left: 2.5rem;
     padding-right: 4rem;
     height: 35px;
-    
+}
+.cadre-photo-video {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2.5rem;
+    padding-right: 1rem;
+    height: 35px;
 }
 .card-titre {
     color: #911C1C;
@@ -197,9 +240,7 @@ section img {
     display: flex;
     height: auto;
 }
-.fas {
-    background: #911C1C;  
-}
+
 .like-number {
     color: #911C1C;
     font-family: 'DM Sans', sans-serif;
@@ -207,4 +248,12 @@ section img {
     font-weight: normal;
     font-size: 24px;
     line-height: 31px;
+}
+.like {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #911C1C;
+    display: block;
+}
+.far {
+    background: #911C1C;  
 }
