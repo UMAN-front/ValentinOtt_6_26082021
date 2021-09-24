@@ -4,7 +4,7 @@ export default class MEDIAPageBuilder {
     // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button
     displayMedia(photographerMedias) {
         photographerMedias.map(media => {
-            console.log("j'implémente l'affichage de média ", media);
+            // console.log("j'implémente l'affichage de média ", media);
             if (media.image) {
                 return new ImageBuilder().displayImage(media)
             }
@@ -17,7 +17,7 @@ export default class MEDIAPageBuilder {
 
 class ImageBuilder {
     displayImage(image) {
-        console.log("j'implémente l'affichage d'une image ", image);
+        // console.log("j'implémente l'affichage d'une image ", image);
         const sectionMedias = document.getElementById('grille-portfolio');
         let articleMedias = document.createElement('article')
         articleMedias.className = 'article-media';
@@ -32,7 +32,7 @@ class ImageBuilder {
             <h3 class="card-titre">${image.title}</h3>
             <div class="nombre-likes">
             <span class="like-number"><a href="#">${image.likes}</a></span>
-            <i class="far fa-heart like-portfolio" aria-label="likes" roles="button" aria-hidden="true"></i>
+            <i class="likes far fa-heart " aria-label="likes" roles="button" aria-hidden="true"></i>
             </div>
          </figcaption>
         </div>
@@ -44,7 +44,7 @@ class ImageBuilder {
 
 class VideoBuilder {
     displayVideo(video) {
-        console.log("j'implémente l'affichage d'une vidéo ", video); 
+        // console.log("j'implémente l'affichage d'une vidéo ", video); 
         const sectionMedias = document.getElementById('grille-portfolio');
         let articleMedias = document.createElement('article')
         articleMedias.className = 'article-media';
@@ -56,7 +56,10 @@ class VideoBuilder {
             </div>
             <figcaption class="cadre-photo-video">
             <h3 class="card-titre">${video.title}</h3>
-            <span class="like-number">${video.likes}</span>
+            <div class="nombre-likes">
+            <span class="like-number"><a href="#">${video.likes}</a></span>
+            <i class="far fa-heart likes" aria-label="likes" roles="button" aria-hidden="true"></i>
+            </div>
          </figcaption>
         </div>
         `

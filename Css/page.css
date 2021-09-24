@@ -212,7 +212,7 @@ section img {
     display: flex;
     justify-content: space-between;
     margin-left: 2.5rem;
-    padding-right: 4rem;
+    padding-right: 3rem;
     height: 35px;
 }
 .cadre-photo-video {
@@ -249,11 +249,10 @@ section img {
     font-size: 24px;
     line-height: 31px;
 }
-.like {
-    font-family: 'DM Sans', sans-serif;
-    background-color: #911C1C;
-    display: block;
+.likes {
+    font-size: 20px;
+    font-weight: 700;
 }
-.far {
-    background: #911C1C;  
+far {
+    font-weight: 700;
 }
