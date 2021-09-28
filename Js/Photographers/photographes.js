@@ -1,6 +1,7 @@
 'use strict';
 
-import MEDIAPageBuilder from '../Factory/Image.js'
+import MEDIAPageBuilder from '../Factory/media.js'
+import ModalPageBuilder from '../Factory/modal.js'
 /////////////////////////////////////////
 export default class PhotographerProfil {
     // Check on which page the user is located, if the position corresponds with the photographer's "id", create the photographer's 'Profile' section
@@ -22,12 +23,14 @@ export default class PhotographerProfil {
         </article>
         `
         sectionPhotographerProfil.innerHTML = templatePhotographerProfil;
-        // new Modal().modal(photographersData);
-        // new Form().fields();
         //Filtre Média
         const medias = data.media
         const photographerMedias = id ? medias.filter(media => media.photographerId == id): [];
         new MEDIAPageBuilder().displayMedia(photographerMedias);
+
+        const modal = data.photographers
+        const photographerMordal = id ? modal.filter(photographer => photographer.id == id): [];
+        new ModalPageBuilder().displayName(photographerMordal);
     }
 }
 

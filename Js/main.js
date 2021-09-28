@@ -15,7 +15,10 @@ import HomePageBuilder from './Home/homePage.js';
 import PhotographerProfil from './Photographers/photographes.js'
 
 //PORTEFOLIO 
-import MEDIAPageBuilder from './Factory/Image.js'
+import MEDIAPageBuilder from './Factory/media.js'
+
+//PORTEFOLIO 
+import ModalPageBuilder from './Factory/modal.js'
 
 
 
@@ -27,6 +30,8 @@ import MEDIAPageBuilder from './Factory/Image.js'
             new PhotographerProfil().displayPhotographerProfil(data);
             // PHOTOGRAPHER PHOTOS
             new MEDIAPageBuilder().displayMedia(data);
+            // PHOTOGRAPHER MODAL
+            new ModalPageBuilder().displayModal(data);
             
             return
         }
