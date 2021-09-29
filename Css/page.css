@@ -73,7 +73,7 @@ section img {
     font-size: 18px;
     line-height: 23px;
 }
-#contact {
+.contact {
     background: #901c1c;
     border: none;
     border-radius: 5px;
@@ -284,7 +284,7 @@ section img {
     margin-left: 35px;
     }
 
-#bground {
+.bground {
     display: none;
     position: absolute;
     width: 100%;

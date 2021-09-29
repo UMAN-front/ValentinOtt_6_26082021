@@ -18,7 +18,7 @@ export default class PhotographerProfil {
         <p class="description">${photographers[0].tagline}</p>
         <p >${photographers[0].tags.map(tag => `<a class="text-tag" href="page-photographe.html">#${tag}</a>`).join(" ")}</p>
         </div>
-        <button id="contact" title="Contactez moi">Contactez-moi</button>
+        <button class="contact" title="Contactez moi">Contactez-moi</button>
         <a href='#' title='${photographers[0].alt}'><img src="./image/portrais/${photographers[0].portrait}" alt="${photographers[0].alt}"></a>
         </article>
         `

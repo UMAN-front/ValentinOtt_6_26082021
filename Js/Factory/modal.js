@@ -15,7 +15,7 @@ export default class ModalPageBuilder {
 class ModalBuilder {
     displayContact(photographers) {
         console.log("j'implémente l'affichage du modal ", photographers);
-        const sectionModal = document.getElementById('bground');
+        const sectionModal = document.getElementsByClassName('Bg-modal');
         let articleModal = document.createElement('article')
         articleModal.className = 'article-modal';
         const templateModal = `
@@ -52,5 +52,22 @@ class ModalBuilder {
         `
         sectionModal.appendChild(articleModal);
         articleModal.innerHTML = templateModal;
+        // DOM ELEMENTS MODAL 
+        let modalbg = document.getElementById("bground");
+        let modalBtn = document.getElementById("contact");
+        let closeBtn = document.getElementsByClassName("close");
+        // ------ DISPLAY MODAL ------ //
+        // LAUNCH MODAL EVENTS
+        modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
+        // LAUNCH MODAL FORM
+        function launchModal() {
+          modalbg.style.display = 'block';
+        }
+        // CLOSE MODAL FORM
+        function closeModal() {
+          modalbg.style.display = 'none';
+          form.reset();
+        }
+        closeBtn[0].addEventListener('click', closeModal);
     }
 }
