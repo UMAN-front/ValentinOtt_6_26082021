@@ -80,7 +80,27 @@ section img {
     bottom: 28px;
     color: #fff;
     cursor: pointer;
-
+    width: 170px;
+    height: 69px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: 250px;
+}
+#contact {
+    background: #901c1c;
+    border: none;
+    border-radius: 5px;
+    bottom: 28px;
+    color: #fff;
+    cursor: pointer;
     width: 170px;
     height: 69px;
     font-family: DM Sans;

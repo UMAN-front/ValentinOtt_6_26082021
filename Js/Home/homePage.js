@@ -1,6 +1,8 @@
 'use strict';
 /////////////////////////////////////////
 
+import Filter from './Filter.js';
+
 // DISPLAY ALL PHOTOGRAPHERS BY DEFAULT
 export default class HomePageBuilder {
     // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button
@@ -12,18 +14,18 @@ export default class HomePageBuilder {
             articlePhotographers.className = photographe.tags.join(' ') + ' articlePh';
             let templatePhotographer = `
             <a href="page-photographe.html?id=${photographe.id}" title="${photographe.name}">
-                <img src="./image/portrais/${photographe.portrait}" alt="${photographe.alt}">
-                <h2 class="name">${photographe.name}</h2>
+            <img src="./image/portrais/${photographe.portrait}" alt="${photographe.alt}">
+            <h2 class="name">${photographe.name}</h2>
             </a>
             <p class="location">${photographe.city}, ${photographe.country}</p>
             <p class="tagline">${photographe.tagline}</p>
             <p class="price">${photographe.price}€/jour</p>
             <ul class="filter">${photographe.tags.map(tag =>
-                `<li data-filter="${tag}">#${tag}</li>`).join(" ")}</ul> 
-            `
-            sectionPhotographers.appendChild(articlePhotographers);
-            articlePhotographers.innerHTML = templatePhotographer;
-            console.log(data);
-        })
+                `<li class="li-ph" data-filter="${tag}">#${tag}</li>`).join(" ")}</ul> 
+                `
+                sectionPhotographers.appendChild(articlePhotographers);
+                articlePhotographers.innerHTML = templatePhotographer;
+            })         
+        new Filter().filterTags();       
     }
 }

@@ -4,7 +4,7 @@ export default class ModalPageBuilder {
   // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button
   displayName(photographerMordal) {
     photographerMordal.map(photographers => {
-      console.log("j'implémente l'affichage des photographes", photographers);
+      // console.log("j'implémente l'affichage des photographes", photographers);
       if (photographers.name) {
         return new ModalBuilder().displayContact(photographers)
       }
@@ -14,7 +14,7 @@ export default class ModalPageBuilder {
 
 class ModalBuilder {
   displayContact(photographers) {
-    console.log("j'implémente l'affichage du modal ", photographers);
+    // console.log("j'implémente l'affichage du modal ", photographers);
     const sectionModal = document.getElementsByClassName('Bg-modal');
     let articleModal = document.createElement('article')
     articleModal.className = 'article-modal';
@@ -54,15 +54,16 @@ class ModalBuilder {
     articleModal.innerHTML = templateModal;
 
     // DOM ELEMENTS MODAL 
-    let modalbg = document.getElementById("bground");
-    let modalBtn = document.getElementById("contact");
+    let modalbg = document.getElementsByClassName("bground");
+    let modalBtn = document.getElementsById("contact");
     // ------ DISPLAY MODAL ------ //
     // LAUNCH MODAL EVENTS
-    modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
+    // modalBtn.forEach((btn) => btn.addEventListener('click', launchModal));
+    modalBtn.forEach((btn) =>  console.log({btn}));
     // LAUNCH MODAL FORM
     function launchModal() {
-      modalbg.style.display = 'block';
       console.log("j'implémente l'affichage des photographes", photographers);
+      modalbg.style.display = 'block';
     }
   }
 }
