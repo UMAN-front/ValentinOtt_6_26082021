@@ -57,8 +57,11 @@ header {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     color: #911C1C;
+    font-family: DM Sans;
     font-style: normal;
+    font-weight: 700;
     font-size: 36px;
+    line-height: 47px;
     display: flex;
     float: left;
     margin-top: 27px;
