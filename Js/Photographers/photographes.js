@@ -33,5 +33,3 @@ export default class PhotographerProfil {
         new ModalPageBuilder().displayName(photographerMordal);
     }
 }
-
- 

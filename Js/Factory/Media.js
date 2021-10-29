@@ -32,7 +32,7 @@ class ImageBuilder {
             <h3 class="card-titre">${image.title}</h3>
             <div class="nombre-likes">
             <span class="like-number"><a href="#">${image.likes}</a></span>
-            <i class="likes far fa-heart " aria-label="likes" roles="button" aria-hidden="true"></i>
+            <i class="likes like-${image.id} far fa-heart " aria-label="likes" roles="button" aria-hidden="true"></i>
             </div>
          </figcaption>
         </div>
@@ -58,10 +58,10 @@ class VideoBuilder {
             <h3 class="card-titre">${video.title}</h3>
             <div class="nombre-likes">
             <span class="like-number"><a href="#">${video.likes}</a></span>
-            <i class="far fa-heart likes" aria-label="likes" roles="button" aria-hidden="true"></i>
+            <i class="likes like-${video.id}far fa-heart likes" aria-label="likes" roles="button" aria-hidden="true"></i>
             </div>
          </figcaption>
-        </div>
+        </div> 
         `
         sectionMedias.appendChild(articleMedias);
         articleMedias.innerHTML = templateMedia;
