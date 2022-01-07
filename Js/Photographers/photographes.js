@@ -1,7 +1,6 @@
 'use strict';
-
-import MEDIAPageBuilder from '../Factory/media.js'
-import ModalPageBuilder from '../Factory/modal.js'
+import MediaPageBuilder from '../Factory/media.js'
+import ModalBuilder from '../Factory/modal.js'
 /////////////////////////////////////////
 export default class PhotographerProfil {
     // Check on which page the user is located, if the position corresponds with the photographer's "id", create the photographer's 'Profile' section
@@ -18,7 +17,7 @@ export default class PhotographerProfil {
         <p class="description">${photographers[0].tagline}</p>
         <p >${photographers[0].tags.map(tag => `<a class="text-tag" href="page-photographe.html">#${tag}</a>`).join(" ")}</p>
         </div>
-        <button class="contact" title="Contactez moi">Contactez-moi</button>
+        <button class="btn-contact" title="Contactez moi">Contactez-moi</button>
         <a href='#' title='${photographers[0].alt}'><img src="./image/portrais/${photographers[0].portrait}" alt="${photographers[0].alt}"></a>
         </article>
         `
@@ -26,10 +25,7 @@ export default class PhotographerProfil {
         //Filtre Média
         const medias = data.media
         const photographerMedias = id ? medias.filter(media => media.photographerId == id): [];
-        new MEDIAPageBuilder().displayMedia(photographerMedias);
-
-        const modal = data.photographers
-        const photographerMordal = id ? modal.filter(photographer => photographer.id == id): [];
-        new ModalPageBuilder().displayName(photographerMordal);
+        new MediaPageBuilder().displayMedia(photographerMedias);
+        new ModalBuilder().displayContact();
     }
 }

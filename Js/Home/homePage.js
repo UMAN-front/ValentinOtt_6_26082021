@@ -2,7 +2,6 @@
 /////////////////////////////////////////
 
 import Filter from './Filter.js';
-
 // DISPLAY ALL PHOTOGRAPHERS BY DEFAULT
 export default class HomePageBuilder {
     // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button

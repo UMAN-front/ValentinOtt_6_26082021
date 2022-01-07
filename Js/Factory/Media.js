@@ -1,17 +1,37 @@
 'use strict';
 /////////////////////////////////////////
-export default class MEDIAPageBuilder {
+export default class MediaPageBuilder {
     // Build the photographers section, call the 'filtertags' function and the 'passer au contenu' button
     displayMedia(photographerMedias) {
-        photographerMedias.map(media => {
+
+        const sortedPhotographerMedias = sortPhotographerMedias(photographerMedias)
+
+        sortedPhotographerMedias.map(media => {
             // console.log("j'implémente l'affichage de média ", media);
             if (media.image) {
+                // console.log("Affichage images", media.image);
                 return new ImageBuilder().displayImage(media)
             }
             if (media.video) {
                 return new VideoBuilder().displayVideo(media)
             }
         })    
+    }
+    sortPhotographerMedias(photographerMedias) {
+        // TO DO : aller chercher le order qui est dans la DOM 
+       const sortedBy = "Populare" 
+
+       switch(sortedBy) {
+        case "Titre":
+          // code block
+          break;
+        case "Date":
+          // code block
+          break;
+        default:
+            return photographerMedias.sort(likes)
+      }
+      
     }
 }
 
@@ -45,6 +65,7 @@ class ImageBuilder {
 class VideoBuilder {
     displayVideo(video) {
         // console.log("j'implémente l'affichage d'une vidéo ", video); 
+        // console.log(video.id);
         const sectionMedias = document.getElementById('grille-portfolio');
         let articleMedias = document.createElement('article')
         articleMedias.className = 'article-media';
@@ -58,7 +79,7 @@ class VideoBuilder {
             <h3 class="card-titre">${video.title}</h3>
             <div class="nombre-likes">
             <span class="like-number"><a href="#">${video.likes}</a></span>
-            <i class="likes like-${video.id}far fa-heart likes" aria-label="likes" roles="button" aria-hidden="true"></i>
+            <i class="likes like-${video.id} far fa-heart likes" aria-label="likes" roles="button" aria-hidden="true"></i>
             </div>
          </figcaption>
         </div> 
