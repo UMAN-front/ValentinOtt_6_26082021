@@ -4,6 +4,7 @@
 // DATA
 import ApiFishEye from './json/data.js';
 
+
 // HOMEPAGE
 import HomePageBuilder from './Home/homePage.js';
 
@@ -16,7 +17,7 @@ import PhotographerProfil from './Photographers/photographes.js'
         if (window.location.pathname.includes("/page-photographe.html")) {
             // PHOTOGRAPHER PROFIL HEADER
             new PhotographerProfil().displayPhotographerProfil(data);
-            
+ 
             return
         }
         // HOMEPAGE (PHOTOGRAPHERS, SCROLL, FILTER)
