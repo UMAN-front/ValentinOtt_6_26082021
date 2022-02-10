@@ -10,7 +10,7 @@ export default class ApiFishEye {
 
         const dataPhotographers = [...data.photographers];
         const dataMedia = [...data.media];
-        // console.log(data.media);
+        
         return {
             'photographers': dataPhotographers,
             'media': dataMedia
